@@ -15,13 +15,35 @@ class WidgetSampleMainPage extends StatefulWidget {
 class _WidgetSampleMainPageState extends State<WidgetSampleMainPage> {
   @override
   Widget build(BuildContext context) {
+    final topAppBar = AppBar(
+      backgroundColor: Colors.green,
+      title: Text(widget.title),
+    );
+
+    final widgetsList = [
+      ListTile(
+        contentPadding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 10.0),
+        title: Text(
+          "Test",
+          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+        ),
+      ),
+    ];
+
+    final makeBody = Container(
+      child: ListView.builder(
+        scrollDirection: Axis.vertical,
+        shrinkWrap: true,
+        itemCount: widgetsList.length,
+        itemBuilder: (context, index) {
+          return widgetsList[index];
+        },
+      ),
+    );
+
     return Scaffold(
-      appBar: AppBar(
-        title: Text(""),
-      ),
-      body: Center(
-        child: Text("WidgetSamplePage"),
-      ),
+      appBar: topAppBar,
+      body: makeBody,
     );
   }
 }
