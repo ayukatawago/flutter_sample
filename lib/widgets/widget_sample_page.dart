@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'expanded_column_page.dart';
+import 'expanded_row_page.dart';
+
 /// Widget sample page
 class WidgetSampleMainPage extends StatefulWidget {
   /// Constructor
@@ -13,6 +16,11 @@ class WidgetSampleMainPage extends StatefulWidget {
 }
 
 class _WidgetSampleMainPageState extends State<WidgetSampleMainPage> {
+  final _widgetItemMap = <String, Object Function()>{
+    'Expanded Column': () => ExpandedColumnSamplePage(),
+    'Expanded Row': () => ExpandedRowSamplePage(),
+  };
+
   @override
   Widget build(BuildContext context) {
     final topAppBar = AppBar(
@@ -20,23 +28,15 @@ class _WidgetSampleMainPageState extends State<WidgetSampleMainPage> {
       title: Text(widget.title),
     );
 
-    final widgetsList = [
-      ListTile(
-        contentPadding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 10.0),
-        title: Text(
-          "Test",
-          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
-        ),
-      ),
-    ];
+    final widgetList = _widgetItemMap.keys.map(getListTile).toList();
 
     final makeBody = Container(
       child: ListView.builder(
         scrollDirection: Axis.vertical,
         shrinkWrap: true,
-        itemCount: widgetsList.length,
+        itemCount: widgetList.length,
         itemBuilder: (context, index) {
-          return widgetsList[index];
+          return widgetList[index];
         },
       ),
     );
@@ -44,6 +44,22 @@ class _WidgetSampleMainPageState extends State<WidgetSampleMainPage> {
     return Scaffold(
       appBar: topAppBar,
       body: makeBody,
+    );
+  }
+
+  ListTile getListTile(String title) {
+    return ListTile(
+      contentPadding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 5.0),
+      title: Text(
+        title,
+        style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+      ),
+      onTap: () => {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => _widgetItemMap[title]()),
+        )
+      },
     );
   }
 }
