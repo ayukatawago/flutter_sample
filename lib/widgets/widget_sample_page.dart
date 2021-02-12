@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'expanded_column_page.dart';
 import 'expanded_row_page.dart';
+import 'wrap_page.dart';
 
 /// Widget sample page
 class WidgetSampleMainPage extends StatefulWidget {
@@ -19,6 +20,7 @@ class _WidgetSampleMainPageState extends State<WidgetSampleMainPage> {
   final _widgetItemMap = <String, Object Function()>{
     'Expanded Column': () => ExpandedColumnSamplePage(),
     'Expanded Row': () => ExpandedRowSamplePage(),
+    'Wrap': () => WrapSamplePage(),
   };
 
   @override
