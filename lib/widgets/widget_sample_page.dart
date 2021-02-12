@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'animated_container_page.dart';
 import 'expanded_column_page.dart';
 import 'expanded_row_page.dart';
+import 'flutter_builder_page.dart';
 import 'opacity_page.dart';
 import 'wrap_page.dart';
 
@@ -25,6 +26,7 @@ class _WidgetSampleMainPageState extends State<WidgetSampleMainPage> {
     'Wrap': () => WrapSamplePage(),
     'AnimatedContainer': () => AnimatedContainerSamplePage(),
     'Opacity': () => OpacitySamplePage(),
+    'FlutterBuilder': () => FlutterBuilderSamplePage(),
   };
 
   @override
