@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'animated_container_page.dart';
 import 'expanded_column_page.dart';
 import 'expanded_row_page.dart';
 import 'wrap_page.dart';
@@ -21,6 +22,7 @@ class _WidgetSampleMainPageState extends State<WidgetSampleMainPage> {
     'Expanded Column': () => ExpandedColumnSamplePage(),
     'Expanded Row': () => ExpandedRowSamplePage(),
     'Wrap': () => WrapSamplePage(),
+    'AnimatedContainer': () => AnimatedContainerSamplePage(),
   };
 
   @override
