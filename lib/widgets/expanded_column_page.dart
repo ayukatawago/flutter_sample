@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 
 ///
 class ExpandedColumnSamplePage extends StatefulWidget {
-  /// Constructor
-  ExpandedColumnSamplePage({Key key}) : super(key: key);
-
   @override
   _ExpandedColumnSamplePageState createState() =>
       _ExpandedColumnSamplePageState();
