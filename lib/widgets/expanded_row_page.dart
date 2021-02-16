@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 
 ///
 class ExpandedRowSamplePage extends StatefulWidget {
-  /// Constructor
-  ExpandedRowSamplePage({Key key}) : super(key: key);
-
   @override
   _ExpandedRowSamplePageState createState() => _ExpandedRowSamplePageState();
 }

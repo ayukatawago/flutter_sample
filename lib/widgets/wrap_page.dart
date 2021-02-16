@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 
 ///
 class WrapSamplePage extends StatefulWidget {
-  /// Constructor
-  WrapSamplePage({Key key}) : super(key: key);
-
   @override
   _WrapSamplePageState createState() => _WrapSamplePageState();
 }

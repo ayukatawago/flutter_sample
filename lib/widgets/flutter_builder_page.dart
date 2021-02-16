@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 
 ///
 class FlutterBuilderSamplePage extends StatefulWidget {
-  /// Constructor
-  FlutterBuilderSamplePage({Key key}) : super(key: key);
-
   @override
   _FlutterBuilderSamplePageState createState() =>
       _FlutterBuilderSamplePageState();
