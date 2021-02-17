@@ -7,6 +7,7 @@ import 'fade_transition_page.dart';
 import 'floating_action_button_page.dart';
 import 'flutter_builder_page.dart';
 import 'opacity_page.dart';
+import 'page_view.dart';
 import 'wrap_page.dart';
 
 /// Widget sample page
@@ -31,6 +32,7 @@ class _WidgetSampleMainPageState extends State<WidgetSampleMainPage> {
     'FlutterBuilder': () => FlutterBuilderSamplePage(),
     'FadeTransition': () => FadeTransitionSamplePage(),
     'FloatingActionButton': () => FloatingActionButtonPage(),
+    'PageView': () => PageViewScreen(),
   };
 
   @override
