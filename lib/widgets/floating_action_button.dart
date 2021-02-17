@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
 ///
-class FloatingActionButtonPage extends StatefulWidget {
+class FloatingActionButtonScreen extends StatefulWidget {
   @override
-  _FloatingActionButtonPageState createState() =>
-      _FloatingActionButtonPageState();
+  _FloatingActionButtonScreenState createState() =>
+      _FloatingActionButtonScreenState();
 }
 
-class _FloatingActionButtonPageState extends State<FloatingActionButtonPage> {
+class _FloatingActionButtonScreenState
+    extends State<FloatingActionButtonScreen> {
   var _message = 'Press the button below';
 
   @override

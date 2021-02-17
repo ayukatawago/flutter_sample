@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 
 ///
-class FlutterBuilderSamplePage extends StatefulWidget {
+class FlutterBuilderScreen extends StatefulWidget {
   @override
-  _FlutterBuilderSamplePageState createState() =>
-      _FlutterBuilderSamplePageState();
+  _FlutterBuilderScreenState createState() => _FlutterBuilderScreenState();
 }
 
-class _FlutterBuilderSamplePageState extends State {
+class _FlutterBuilderScreenState extends State {
   final Future<String> _calculation = Future<String>.delayed(
     Duration(seconds: 2),
     () => 'Data Loaded',

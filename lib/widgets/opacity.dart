@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 ///
-class OpacitySamplePage extends StatefulWidget {
+class OpacityScreen extends StatefulWidget {
   @override
-  _OpacitySamplePageState createState() => _OpacitySamplePageState();
+  _OpacityScreenState createState() => _OpacityScreenState();
 }
 
-class _OpacitySamplePageState extends State {
+class _OpacityScreenState extends State {
   bool _visible = true;
 
   @override
