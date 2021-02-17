@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 
 ///
-class FadeTransitionSamplePage extends StatefulWidget {
+class FadeTransitionScreen extends StatefulWidget {
   @override
-  _FadeTransitionSamplePageState createState() =>
-      _FadeTransitionSamplePageState();
+  _FadeTransitionScreenState createState() => _FadeTransitionScreenState();
 }
 
-class _FadeTransitionSamplePageState extends State<FadeTransitionSamplePage>
+class _FadeTransitionScreenState extends State<FadeTransitionScreen>
     with SingleTickerProviderStateMixin {
   AnimationController _controller;
   Animation _animation;

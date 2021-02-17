@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 ///
-class WrapSamplePage extends StatefulWidget {
+class WrapScreen extends StatefulWidget {
   @override
-  _WrapSamplePageState createState() => _WrapSamplePageState();
+  _WrapScreenState createState() => _WrapScreenState();
 }
 
-class _WrapSamplePageState extends State {
+class _WrapScreenState extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

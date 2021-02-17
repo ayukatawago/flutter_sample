@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 ///
-class AnimatedContainerSamplePage extends StatefulWidget {
+class AnimatedContainerScreen extends StatefulWidget {
   @override
-  _AnimatedContainerSamplePageState createState() =>
-      _AnimatedContainerSamplePageState();
+  _AnimatedContainerScreenState createState() =>
+      _AnimatedContainerScreenState();
 }
 
-class _AnimatedContainerSamplePageState extends State {
+class _AnimatedContainerScreenState extends State {
   bool _selected = false;
 
   @override

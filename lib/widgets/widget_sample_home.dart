@@ -1,37 +1,37 @@
 import 'package:flutter/material.dart';
 
-import 'animated_container_page.dart';
-import 'expanded_column_page.dart';
-import 'expanded_row_page.dart';
-import 'fade_transition_page.dart';
-import 'floating_action_button_page.dart';
-import 'flutter_builder_page.dart';
-import 'opacity_page.dart';
+import 'animated_container.dart';
+import 'expanded_column.dart';
+import 'expanded_row.dart';
+import 'fade_transition.dart';
+import 'floating_action_button.dart';
+import 'flutter_builder.dart';
+import 'opacity.dart';
 import 'page_view.dart';
-import 'wrap_page.dart';
+import 'wrap.dart';
 
 /// Widget sample page
-class WidgetSampleMainPage extends StatefulWidget {
+class WidgetSampleHomeScreen extends StatefulWidget {
   /// Constructor
-  WidgetSampleMainPage({Key key, this.title}) : super(key: key);
+  WidgetSampleHomeScreen({Key key, this.title}) : super(key: key);
 
   /// Title
   final String title;
 
   @override
-  _WidgetSampleMainPageState createState() => _WidgetSampleMainPageState();
+  _WidgetSampleHomeScreenState createState() => _WidgetSampleHomeScreenState();
 }
 
-class _WidgetSampleMainPageState extends State<WidgetSampleMainPage> {
+class _WidgetSampleHomeScreenState extends State<WidgetSampleHomeScreen> {
   final _widgetItemMap = <String, Object Function()>{
-    'Expanded Column': () => ExpandedColumnSamplePage(),
-    'Expanded Row': () => ExpandedRowSamplePage(),
-    'Wrap': () => WrapSamplePage(),
-    'AnimatedContainer': () => AnimatedContainerSamplePage(),
-    'Opacity': () => OpacitySamplePage(),
-    'FlutterBuilder': () => FlutterBuilderSamplePage(),
-    'FadeTransition': () => FadeTransitionSamplePage(),
-    'FloatingActionButton': () => FloatingActionButtonPage(),
+    'Expanded Column': () => ExpandedColumnScreen(),
+    'Expanded Row': () => ExpandedRowScreen(),
+    'Wrap': () => WrapScreen(),
+    'AnimatedContainer': () => AnimatedContainerScreen(),
+    'Opacity': () => OpacityScreen(),
+    'FlutterBuilder': () => FlutterBuilderScreen(),
+    'FadeTransition': () => FadeTransitionScreen(),
+    'FloatingActionButton': () => FloatingActionButtonScreen(),
     'PageView': () => PageViewScreen(),
   };
 

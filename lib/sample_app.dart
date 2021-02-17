@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'widgets/widget_sample_page.dart';
+import 'widgets/widget_sample_home.dart';
 
 /// Sample Flutter App
 class SampleApp extends StatelessWidget {
@@ -12,7 +12,7 @@ class SampleApp extends StatelessWidget {
         primarySwatch: Colors.green,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: WidgetSampleMainPage(title: 'Flutter Sample'),
+      home: WidgetSampleHomeScreen(title: 'Flutter Sample'),
     );
   }
 }
