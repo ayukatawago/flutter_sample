@@ -5,7 +5,7 @@ import 'expanded_column.dart';
 import 'expanded_row.dart';
 import 'fade_transition.dart';
 import 'floating_action_button.dart';
-import 'flutter_builder.dart';
+import 'future_builder.dart';
 import 'opacity.dart';
 import 'page_view.dart';
 import 'wrap.dart';
@@ -29,7 +29,7 @@ class _WidgetSampleHomeScreenState extends State<WidgetSampleHomeScreen> {
     'Wrap': () => WrapScreen(),
     'AnimatedContainer': () => AnimatedContainerScreen(),
     'Opacity': () => OpacityScreen(),
-    'FlutterBuilder': () => FlutterBuilderScreen(),
+    'FutureBuilder': () => FlutterBuilderScreen(),
     'FadeTransition': () => FadeTransitionScreen(),
     'FloatingActionButton': () => FloatingActionButtonScreen(),
     'PageView': () => PageViewScreen(),
@@ -71,7 +71,9 @@ class _WidgetSampleHomeScreenState extends State<WidgetSampleHomeScreen> {
       onTap: () => {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => _widgetItemMap[title]()),
+          MaterialPageRoute(
+            builder: (context) => _widgetItemMap[title](),
+          ),
         )
       },
     );
