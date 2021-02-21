@@ -7,7 +7,7 @@ class FlutterBuilderScreen extends StatefulWidget {
 }
 
 class _FlutterBuilderScreenState extends State {
-  final Future<String> _calculation = Future<String>.delayed(
+  final _calculation = Future<String>.delayed(
     Duration(seconds: 2),
     () => 'Data Loaded',
   );
@@ -16,7 +16,7 @@ class _FlutterBuilderScreenState extends State {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('FlutterBuilder Sample'),
+        title: Text('FutureBuilder Sample'),
       ),
       body: DefaultTextStyle(
         style: Theme.of(context).textTheme.headline4,
