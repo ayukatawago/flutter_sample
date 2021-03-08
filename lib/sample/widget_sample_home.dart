@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 
 import 'animated_container.dart';
 import 'expanded_column.dart';
@@ -8,6 +9,7 @@ import 'floating_action_button.dart';
 import 'future_builder.dart';
 import 'opacity.dart';
 import 'page_view.dart';
+import 'widget/platform_list_tile.dart';
 import 'wrap.dart';
 
 /// Widget sample page
@@ -35,9 +37,31 @@ class _WidgetSampleHomeScreenState extends State<WidgetSampleHomeScreen> {
     'PageView': () => PageViewScreen(),
   };
 
+  PlatformListTile getListTile(String title) {
+    return PlatformListTile(
+      contentPadding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 5.0),
+      title: Text(
+        title,
+        style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+      ),
+      onTap: () => {
+        Navigator.push(
+            context,
+            platformPageRoute(
+              context: context,
+              builder: (_) => _widgetItemMap[title](),
+            )
+            // MaterialPageRoute(
+            //   builder: (context) => _widgetItemMap[title](),
+            // ),
+            )
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    final topAppBar = AppBar(
+    final topAppBar = PlatformAppBar(
       backgroundColor: Colors.green,
       title: Text(widget.title),
     );
@@ -55,27 +79,9 @@ class _WidgetSampleHomeScreenState extends State<WidgetSampleHomeScreen> {
       ),
     );
 
-    return Scaffold(
+    return PlatformScaffold(
       appBar: topAppBar,
       body: makeBody,
-    );
-  }
-
-  ListTile getListTile(String title) {
-    return ListTile(
-      contentPadding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 5.0),
-      title: Text(
-        title,
-        style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
-      ),
-      onTap: () => {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => _widgetItemMap[title](),
-          ),
-        )
-      },
     );
   }
 }

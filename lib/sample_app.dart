@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 
-import 'widgets/widget_sample_home.dart';
+import 'sample/widget_sample_home.dart';
 
 /// Sample Flutter App
 class SampleApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return PlatformApp(
       title: 'Flutter Sample',
-      theme: ThemeData(
-        primarySwatch: Colors.green,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+      material: (_, __) => MaterialAppData(
+        theme: ThemeData(
+          primarySwatch: Colors.green,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+        ),
       ),
       home: WidgetSampleHomeScreen(title: 'Flutter Sample'),
     );
