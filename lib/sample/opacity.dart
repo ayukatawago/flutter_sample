@@ -1,4 +1,5 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 
 ///
 class OpacityScreen extends StatefulWidget {
@@ -17,8 +18,8 @@ class _OpacityScreenState extends State {
           _visible = !_visible;
         });
       },
-      child: Scaffold(
-        appBar: AppBar(
+      child: PlatformScaffold(
+        appBar: PlatformAppBar(
           title: Text('Opacity Sample'),
         ),
         body: Center(

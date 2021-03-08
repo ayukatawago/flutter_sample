@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 
 ///
 class AnimatedContainerScreen extends StatefulWidget {
@@ -18,8 +20,8 @@ class _AnimatedContainerScreenState extends State {
           _selected = !_selected;
         });
       },
-      child: Scaffold(
-        appBar: AppBar(
+      child: PlatformScaffold(
+        appBar: PlatformAppBar(
           title: Text('AnimatedContainer Sample'),
         ),
         body: Center(

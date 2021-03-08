@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 
 ///
 class FlutterBuilderScreen extends StatefulWidget {
@@ -14,8 +16,8 @@ class _FlutterBuilderScreenState extends State {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
+    return PlatformScaffold(
+      appBar: PlatformAppBar(
         title: Text('FutureBuilder Sample'),
       ),
       body: DefaultTextStyle(
